@@ -148,6 +148,7 @@ export const projects = [
     tags: [
       { name: "REACT+VITE", color: "blue-text-gradient" },
       { name: "NODE+EXPRESS", color: "green-text-gradient" },
+      { name: "TAILWINDCSS", color: "pink-text-gradient" },
       { name: "MONGODB", color: "pink-text-gradient" },
     ],
     image: ecommerce,
