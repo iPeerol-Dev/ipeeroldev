@@ -61,8 +61,8 @@ const Navbar = () => {
           >
             <img src={displaypicture} alt="logo" className="w-9 h-9 object-contain" />
             <p className="text-white text-[20px] font-bold cursor-pointer flex">
-              PETER&nbsp;
-              <span className="sm:block hidden">OSHO</span>
+              iPeerolDev&nbsp;
+              {/* <span className="sm:block hidden">DEV</span> */}
             </p>
           </Link>
           {renderNavLinks(false)}
