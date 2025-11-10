@@ -57,7 +57,7 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "Graduate Trainee | Intern",
+    title: "Software Engineer | Intern",
     company_name: "SQI College of ICT | Ibadan, Nigeria | Hybrid",
     icon: mathwork,
     iconBg: "#161329",
@@ -79,7 +79,7 @@ export const experiences = [
 
       "Assisted in deploying applications on test servers, gaining exposure to hosting and deployment practices.",
 
-      "Strengthened knowledge of JavaScript ES6+ features such as async/await, destructuring, and modular coding.",
+      "Strengthened knowledge of JavaScript features such as async/await, destructuring, and modular coding.",
 
       "Practiced agile workflows, including sprint planning, standups, and project documentation.",
 
