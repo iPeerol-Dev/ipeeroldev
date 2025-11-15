@@ -9,6 +9,8 @@ import {
   nodejs,
   git,
   mathwork,
+  leadcity,
+  sqi,
   threejs,
   fairmoney,
   kuda,
@@ -57,11 +59,30 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "Software Engineer | Intern",
-    company_name: "SQI College of ICT | Ibadan, Nigeria | Hybrid",
-    icon: mathwork,
+   title: "Software Engineer | Intern",
+    company_name: "Lead City University, ICT Software Unit | Ibadan, Nigeria | On-site",
+    icon: leadcity,
     iconBg: "#161329",
-    date: "Jan 2025 - Present",
+    date: "Nov 2025 - Present",
+    points: [
+      "Diagnosed and resolved payment gateway issues, improving transaction success rate and ensuring seamless processing for student fees across multiple payment channels.",
+      "Maintained student portal systems, reducing authentication and login issues by 35% through systematic debugging and optimisation.",
+      "Debugged and fixed software defects in the codebase, performing code reviews and implementing patches to enhance system stability.",
+      "Managed hostel management system functionalities, including room allocation, occupancy tracking, and availability updates.",
+      "Investigated and resolved payment discrepancies and portal errors by identifying and fixing root causes in backend systems.",
+      "Conducted database maintenance and data integrity checks to ensure accurate student and payment records.",
+      "Collaborated with the development team on feature implementations and participated in system testing before releases.",
+      "Documented code changes, bug fixes, and technical procedures for knowledge management.",
+      "Monitored system performance during peak usage periods, such as registration and exam result releases.",
+      "Contributed to system improvements by identifying optimisation opportunities and implementing user experience enhancements.",
+    ],
+  },
+  {
+    title: "Software Engineer | Intern",
+    company_name: "SQI College of ICT | Ibadan, Nigeria | On-site",
+    icon: sqi,
+    iconBg: "#161329",
+    date: "Jan 2025 - Nov 2025",
     points: [
       "Built responsive web interfaces using HTML5, CSS3, Bootstrap, and Tailwind CSS to ensure cross-device compatibility.",
 
@@ -92,22 +113,6 @@ export const experiences = [
       "Enhanced professional skills in teamwork, adaptability, and problem-solving by working on group projects.",
     ],
   },
-  //  {
-  //   title: "Customer Care Representative",
-  //   company_name: "Flex Homes Realty | Nigeria | Remote",
-  //   icon: mathwork,
-  //   iconBg: "#161329",
-  //   date: "Sep 2023 - Present",
-  //   points: [
-  //     "Provided accurate details on property listings, pricing, payment plans, and services, boosting client trust and informed decision-making.",
-  //     "Resolved customer complaints effectively, maintaining a high level of client satisfaction and loyalty.",
-  //     "Guided clients through documentation, agreements, and payment processes, ensuring smooth transactions.",
-  //     "Maintained up-to-date customer records and interaction logs, supporting efficient client management.",
-  //     "Collaborated with sales and marketing teams to nurture leads, contributing to revenue growth.",
-  //     "Conducted after-sales follow-ups to strengthen long-term client relationships and referrals.",
-  //     "Gathered and reported customer feedback, supporting service improvement initiatives.",
-  //   ],
-  // },
   {
     title: "Computer Operator",
     company_name: "Bozatec Computers | Lagos, Nigeria | On-site",
@@ -123,7 +128,7 @@ export const experiences = [
       "Assisted colleagues with basic ICT tasks, improving overall office efficiency.",
       "Maintained confidentiality and data integrity while handling sensitive information.",
       "Demonstrated speed, accuracy, and attention to detail in completing repetitive clerical tasks.",
-      "Supported supervisors with documentation for meetings, reports, and presentations."
+      "Supported supervisors with documentation for meetings, reports, and presentations.",
     ],
   },
 ];

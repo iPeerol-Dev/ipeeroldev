@@ -1,18 +1,10 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { DRACOLoader } from "three/addons/loaders/DRACOLoader";
 import CanvasLoader from "../Loader";
 
 const ComputerModel = ({ isMobile }) => {
-  const { scene } = useGLTF(
-    "./desktop_pc/scene.gltf",
-    undefined,
-    (loader) => {
-      const dracoLoader = new DRACOLoader();
-      loader.setDRACOLoader(dracoLoader);
-    }
-  );
+  const { scene } = useGLTF("/desktop_pc/scene.gltf");
 
   return (
     <mesh>
@@ -36,13 +28,17 @@ const ComputerModel = ({ isMobile }) => {
   );
 };
 
-const MemoizedComputerModel = React.memo(ComputerModel);
-
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => {
+    // Initialize with actual value instead of false
+    return window.matchMedia("(max-width: 500px)").matches;
+  });
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Set initial value
+    setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
@@ -69,7 +65,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <MemoizedComputerModel isMobile={isMobile} />
+        <ComputerModel isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>

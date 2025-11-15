@@ -8,9 +8,9 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring")}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -22,16 +22,26 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
         <div className="relative w-full h-[230px]">
           <img
             src={image}
-            alt="project_image"
+            alt={`${name} project screenshot`}
             className="w-full h-full object-cover rounded-2xl"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
-            </div>
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    window.open(source_code_link, "_blank");
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`View source code for ${name}`}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img src={github} alt="GitHub" className="w-1/2 h-1/2 object-contain" />
+              </div>
+            )}
           </div>
         </div>
         <div className="mt-5">
@@ -54,19 +64,22 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Below are some of my Projects:</h2>
       </motion.div>
       <div className="w-full flex">
-        <motion.p variants={fadeIn("", "", 0.1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          The following projects showcase my skills and experience through some samples
+        <motion.p 
+          variants={fadeIn("", "", 0.1, 1)} 
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        >
+          The following projects showcase my skills and experience through samples
           of my work. Each project is briefly described with links to code
-          repositories in it.
+          repositories.
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} {...project} />
+          <ProjectCard key={project.name || `project-${index}`} index={index} {...project} />
         ))}
       </div>
     </>

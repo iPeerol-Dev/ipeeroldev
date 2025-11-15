@@ -1,5 +1,7 @@
 // Import company logos
 import mathwork from "./company/mathwork.png";
+import leadcity from "./company/leadcity.png";
+import sqi from "./company/sqi.png";  
 
 // Import project images
 import fairmoney from "./projects/fairmoney.png";
@@ -50,4 +52,6 @@ export {
   displaypicture,
   bootstrap,
   mongodb,
+  leadcity,
+  sqi,
 };

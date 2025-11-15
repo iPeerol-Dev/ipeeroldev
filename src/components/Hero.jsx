@@ -19,18 +19,19 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hello, I'm <span className="text-[#915EFF]">Peter</span>
           </h1>
-          <div className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Welcome to my portfolio! I am a{" "}
-            <Typewriter
-              options={{
-                strings: ["MERN Stack Developer", "Web Designer", "Robotics and AI Enthusiast."],
-                autoStart: true,
-                loop: true,
-                loopCount: Infinity,
-                deleteSpeed: "natural",
-                pauseFor: 1000,
-              }}
-            />
+          <div className={`${styles.heroSubText} mt-2 text-white-100 flex flex-wrap items-center gap-2`}>
+            <span>Welcome to my portfolio! I am a</span>
+            <span className="inline-block">
+              <Typewriter
+                options={{
+                  strings: ["Software Engineer", "Robotics and AI Enthusiast."],
+                  autoStart: true,
+                  loop: true,
+                  deleteSpeed: "natural",
+                  pauseFor: 1000,
+                }}
+              />
+            </span>
           </div>
         </div>
       </div>
