@@ -38,7 +38,7 @@ const Navbar = () => {
         } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
         <a 
-          href="/cv/Peter_Osho's_Tech_CV.pdf" 
+          href="/mycv/Peter_Osho's_Tech_CV.pdf" 
           download="Peter_Osho's_Tech_CV.pdf"
           aria-label="Download CV"
           className="hover:text-white transition-colors"
