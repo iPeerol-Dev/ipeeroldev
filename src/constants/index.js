@@ -160,16 +160,16 @@ export const projects = [
     source_code_link: "",
   },
   {
-    name: "Quiz App",
+    name: "Quiz Application",
     description:
-      "A web application that allows users to take quizzes and see their results.",
+      "Interactive quiz application with 50 questions and 10-minute timer. Built with vanilla HTML, CSS & JavaScript. Features progress tracking, auto-submit, and detailed answer review.",
     tags: [
       { name: "HTML", color: "blue-text-gradient" },
       { name: "CSS", color: "green-text-gradient" },
       { name: "JAVASCRIPT", color: "pink-text-gradient" },
     ],
     image: quizapp,
-    source_code_link: "",
+    source_code_link: "https://github.com/iPeerol-Dev/quiz-application.git",
   },
   {
     name: "kuda Bank",
