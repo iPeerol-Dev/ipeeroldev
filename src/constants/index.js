@@ -160,16 +160,16 @@ export const projects = [
     source_code_link: "",
   },
   {
-    name: "Quiz Application",
+    name: "MultiLevel-Quiz Application",
     description:
-      "Interactive quiz application with 50 questions and 10-minute timer. Built with vanilla HTML, CSS & JavaScript. Features progress tracking, auto-submit, and detailed answer review.",
+      "Interactive multi-level quiz app with Easy, Medium, and Hard levels. Features randomized questions and options, a timer, progress tracking, and pass/fail results. Unlock higher levels by passing previous ones. Perfect for learning, self-testing, or casual quizzes.",
     tags: [
       { name: "HTML", color: "blue-text-gradient" },
       { name: "CSS", color: "green-text-gradient" },
       { name: "JAVASCRIPT", color: "pink-text-gradient" },
     ],
     image: quizapp,
-    source_code_link: "https://github.com/iPeerol-Dev/quiz-application.git",
+    source_code_link: "https://github.com/iPeerol-Dev/multilevel-quiz.git",
   },
   {
     name: "kuda Bank",
