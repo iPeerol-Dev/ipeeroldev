@@ -37,8 +37,8 @@ const Navbar = () => {
           isSecondary ? 'text-secondary' : 'text-white'
         } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
-        <a 
-          href="/mycv/Peter_Osho's_Tech_CV.pdf" 
+        <a
+          href="/mycv/Peter_Osho%27s_Tech_CV.pdf" /* encoded apostrophe */
           download="Peter_Osho's_Tech_CV.pdf"
           aria-label="Download CV"
           className="hover:text-white transition-colors"

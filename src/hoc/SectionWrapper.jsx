@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
-const StarWrapper = (Component, idName) => () => (
+// changed name to match file & exported symbol
+const SectionWrapper = (Component, idName) => () => (
   <motion.section
     variants={staggerContainer()}
     initial="hidden"
@@ -17,4 +18,4 @@ const StarWrapper = (Component, idName) => () => (
   </motion.section>
 );
 
-export default StarWrapper;
+export default SectionWrapper;
