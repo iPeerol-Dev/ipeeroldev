@@ -21,7 +21,7 @@ const Navbar = () => {
           key={link.id}
           className={`${
             active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'
-          } hover:text-white text-[20px] font-medium cursor-pointer`}
+          } hover:text-secondary text-[20px] font-medium cursor-pointer`}
           onClick={() => {
             setActive(link.title);
             if (isSecondary) {
@@ -38,10 +38,10 @@ const Navbar = () => {
         } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
         <a
-          href="/mycv/Peter_Osho%27s_Tech_CV.pdf" /* encoded apostrophe */
-          download="Peter_Osho's_Tech_CV.pdf"
+          href="/mycv/Peter_Osho_CV.pdf"
+          download="Peter_Osho_CV.pdf"
           aria-label="Download CV"
-          className="hover:text-white transition-colors"
+          className="hover:text-secondary transition-colors"
         >
           CV
         </a>
@@ -49,12 +49,12 @@ const Navbar = () => {
       <li
         className={`${
           isSecondary ? 'text-secondary' : 'text-white'
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
+        } hover:text-white== text-[20px] font-medium cursor-pointer`}
       >
         <button 
           onClick={() => window.open('https://www.linkedin.com/in/peter-osho-04671634b/', '_blank')}
           aria-label="Visit LinkedIn profile"
-          className="hover:text-white transition-colors"
+          className="hover:text-secondary transition-colors"
         >
           LinkedIn
         </button>

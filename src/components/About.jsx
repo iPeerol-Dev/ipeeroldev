@@ -1,13 +1,14 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import { Tilt } from 'react-tilt';
-import { services } from '../constants';
-import { SectionWrapper } from '../hoc';
-import { styles } from '../styles';
-import { fadeIn, textVariant } from '../utils/motion';
+import { motion } from "framer-motion";
+import React from "react";
+import SectionHeader from "./SectionHeader";
+import { Tilt } from "react-tilt";
+import { services } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt 
+  <Tilt
     className="xs:w-[250px] w-full"
     options={{
       max: 45,
@@ -16,20 +17,20 @@ const ServiceCard = ({ index, title, icon }) => (
     }}
   >
     <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
-      <div
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img 
-          src={icon} 
+      <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <img
+          src={icon}
           alt={`${title} icon`}
-          className="w-16 h-16 object-contain" 
-          loading="lazy" 
+          className="w-16 h-16 object-contain"
+          loading="lazy"
         />
 
-        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+        <h3 className="text-white text-[20px] font-bold text-center">
+          {title}
+        </h3>
       </div>
     </motion.div>
   </Tilt>
@@ -39,18 +40,27 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <SectionHeader subtitle="Introduction" title="Overview" />
       </motion.div>
 
       <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-center mx-auto"
       >
-        I am a dedicated professional with a background in Microbiology and proven communication skills. Experienced in administrative support, customer service, and web development, I bring a versatile skill set to enhance lives and support business growth. Currently, I am further expanding my expertise in web development to deliver innovative and effective solutions.
+        I'm a Full-Stack Software Engineer specializing in the MERN stack, with
+        proven experience solving real-world problems in educational technology
+        and building dynamic web applications. I've diagnosed payment gateway
+        issues affecting thousands of users, reduced authentication errors by
+        35%, and developed responsive SPAs with React and Node.js. My approach
+        combines technical expertise with problem-solving, collaboration, and a
+        commitment to clean, maintainable code. I'm passionate about continuous
+        learning, writing efficient solutions, and creating seamless user
+        experiences. Whether debugging backend systems or designing intuitive
+        interfaces, I bring analytical thinking and attention to detail to every
+        project.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-10 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
@@ -59,6 +69,6 @@ const About = () => {
   );
 };
 
-const WrappedAbout = SectionWrapper(About, 'about');
+const WrappedAbout = SectionWrapper(About, "about");
 
 export default WrappedAbout;
