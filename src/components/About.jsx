@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
-    className="xs:w-[250px] w-full"
+    className="w-[250px] sm:w-[220px] xs:w-[250px]"
     options={{
       max: 45,
       scale: 1,
@@ -18,7 +18,7 @@ const ServiceCard = ({ index, title, icon }) => (
   >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      className="green-pink-gradient p-[1px] rounded-[20px] shadow-card mx-auto"
     >
       <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
         <img
@@ -60,7 +60,8 @@ const About = () => {
         project.
       </motion.p>
 
-      <div className="mt-10 flex flex-wrap gap-10">
+      {/* center cards on small/tablet, left-align on larger screens */}
+      <div className="mt-6 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

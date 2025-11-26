@@ -9,7 +9,7 @@ const SectionWrapper = (Component, idName) => () => (
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.25 }}
-    className={`${styles.padding} max-w-7xl mx-auto relative z-0 py-6`}
+    className={`${styles.padding} max-w-7xl mx-auto relative z-0 py-4`} /* reduce vertical padding for all sections */
   >
     <span className="hash-span" id={idName}>
       &nbsp;
