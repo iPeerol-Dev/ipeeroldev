@@ -64,7 +64,7 @@ const Navbar = () => {
         <button
           onClick={() =>
             window.open(
-              "https://www.linkedin.com/in/peter-osho-04671634b/",
+              "https://www.linkedin.com/in/peter-osho",
               "_blank"
             )
           }
